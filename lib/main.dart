@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'directions/home/home.dart';
+import 'addresses/home/home.dart';
 
 void main() {
   runApp(const MyApp());

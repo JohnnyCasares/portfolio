@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/navBar/navigationBar.dart';
 
+//for now this template is useless. it will have a better use later
+//CHECK LINES 10-14 FOR MEANINGFULL COMMENTS
 class TemplateLayout extends StatelessWidget {
   const TemplateLayout({Key? key}) : super(key: key);
 
@@ -8,40 +11,16 @@ class TemplateLayout extends StatelessWidget {
     //return navigation bar
     //and body
     //make a constructor so this widget can be used in any of the directions: home, etc
+    //might have to review tutorial. NavBar should not be loaded everytime we change tabs
+    //content/body changes, app bar should not
     return Container(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           //navbar
-          //later we create a different file and import the widget
           SizedBox(
             height: 20,
           ),
-          Row(
-            //mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              //Johnny Casares
-              Expanded(
-                  flex: 4,
-                  child: Text(
-                    'Johnny Casares',
-                    style: TextStyle(
-                        color: Colors.purple, decoration: TextDecoration.none),
-                  )),
-
-              //Buttons home, experience...
-              Expanded(
-                  flex: 1,
-                  child: TextButton(onPressed: () {}, child: Text('Home'))),
-              Expanded(
-                  flex: 1,
-                  child: TextButton(onPressed: () {}, child: Text('Projects'))),
-              Expanded(
-                  flex: 1,
-                  child:
-                      TextButton(onPressed: () {}, child: Text('Experience'))),
-            ],
-          )
+          NavigationBarCustom(),
         ],
       ),
     );
