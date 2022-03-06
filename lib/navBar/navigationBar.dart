@@ -7,18 +7,23 @@ class NavigationBarCustom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.end,
-      children: [
-        //Johnny Casares
-        //LOGO
-        Logo(),
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 30),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          //Johnny Casares
+          //LOGO
+          Logo(
+            title: 'Johnny Casares',
+          ),
 
-        //Buttons home, experience...
-        NavigationBarItem(title: 'Home'),
-        NavigationBarItem(title: 'Projects'),
-        NavigationBarItem(title: 'Experience'),
-      ],
+          //Buttons home, experience...
+          NavigationBarItem(title: 'Home'),
+          NavigationBarItem(title: 'Projects'),
+          NavigationBarItem(title: 'Experience'),
+        ],
+      ),
     );
   }
 }
