@@ -7,7 +7,8 @@ import 'package:flutter/material.dart';
 class ExtraInfo extends StatelessWidget {
   String imageURL;
   String title;
-  ExtraInfo({required this.imageURL, required this.title});
+  String? httpAddress;
+  ExtraInfo({required this.imageURL, required this.title, this.httpAddress});
 
   @override
   Widget build(BuildContext context) {
