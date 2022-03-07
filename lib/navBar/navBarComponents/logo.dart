@@ -14,7 +14,8 @@ class Logo extends StatelessWidget {
             color: Colors.purple,
             decoration: TextDecoration.none,
             fontFamily: 'Comfortaa',
-            // fontWeight: FontWeight.w700
+            fontWeight: FontWeight.w700,
+            fontSize: 40,
           ),
         ));
   }

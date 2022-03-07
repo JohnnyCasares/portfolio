@@ -32,12 +32,13 @@ class Home extends StatelessWidget {
 
               InfoField(
                   description:
-                      "'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum'",
+                      "I am Johnny Casares and welcome to my portfolio.\nI come from Venezuela and I have been in America since 2016. Currently I am pursuing a degree in Computer Science and I am thinking of pursuing a second major in the Internet of Things. Some of my current projects involve learning more about:\nHardware, Web and App Development, Linux essentials.\nSome of the tools I have used up to this point are:\nJava, Dart(Flutter), Linux Mint, Python    ",
                   imageURL:
                       'https://media-exp1.licdn.com/dms/image/C4D03AQFLcyKms8N-iw/profile-displayphoto-shrink_800_800/0/1633735666264?e=1651708800&v=beta&t=ms5xyxQy_SLibXRBLDZvgyMT4QIsjJqfWJl1Qgo-B6U',
                   color: Colors.lightBlueAccent),
               InfoField(
-                  description: 'Education',
+                  description:
+                      'Bachelor of Science in Computer Science                   2020-2024 \n•Florida International University (FIU), Miami, FL\n•Relevant Coursework: Logic for CS, Discrete Structures, Data Structures, Internet of Things, Computer Architecture, Software Engineering, Statistics, Calculus II',
                   imageURL:
                       'https://media-exp1.licdn.com/dms/image/C560BAQEVMx6tBKgu4g/company-logo_200_200/0/1607460696992?e=1654128000&v=beta&t=FiYnmGj2v52FStr6fgcpjlg-4YYESehLBL_K6pLjc74',
                   color: Colors.lightGreenAccent),
@@ -107,10 +108,6 @@ class Home extends StatelessWidget {
               ),
 
               //Add contact form
-
-              // SizedBox(
-              //   height: 30,
-              // ),
 
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
