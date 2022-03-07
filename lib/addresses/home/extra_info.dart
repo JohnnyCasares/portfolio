@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 //This class will be used to show my affiliations with images
 //UPE, GDSC, SHPE
 //and then also for my social media links (use images)
@@ -7,8 +7,10 @@ import 'package:flutter/material.dart';
 class ExtraInfo extends StatelessWidget {
   String imageURL;
   String title;
-  String? httpAddress;
-  ExtraInfo({required this.imageURL, required this.title, this.httpAddress});
+  String httpAddress;
+
+  ExtraInfo(
+      {required this.imageURL, required this.title, required this.httpAddress});
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +29,20 @@ class ExtraInfo extends StatelessWidget {
             child: IconButton(
               icon: Image.network(imageURL, fit: BoxFit.cover),
               iconSize: 60,
-              onPressed: () {},
+              onPressed: _launchUrl,
             ),
           ),
         ],
       ),
     );
+  }
+
+  _launchUrl() async {
+    String url = httpAddress;
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw "Could not reach address";
+    }
   }
 }
