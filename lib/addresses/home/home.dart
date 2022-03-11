@@ -5,9 +5,10 @@ import 'package:portfolio/addresses/home/info_field.dart';
 import 'package:portfolio/navBar/navigationBar.dart';
 import 'package:portfolio/template/templatelayout.dart';
 import 'package:portfolio/template/text_form.dart';
+import 'package:validators/validators.dart' as validator;
 
 class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -116,44 +117,85 @@ class Home extends StatelessWidget {
 
               //Add contact form
 
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    'Contact Form',
-                    style: TextStyle(
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Comfortaa'),
-                  ),
-                  Text(
-                    'I am available for opportunities in freelancing, collaborations, and internships',
-                    style: TextStyle(fontFamily: "Comfortaa"),
-                  ),
-                  TextFormCustom(hint: 'Name'),
-                  TextFormCustom(hint: "Email"),
-                  TextFormCustom(hint: 'Subject'),
-                  TextFormCustom(
-                    hint: 'Message',
-                    number_of_lines: 7,
-                  )
-                ],
-              ),
-              //submit button
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
-                child: MaterialButton(
-                  onPressed: () {},
-                  color: Colors.black87,
-                  height: 60,
-                  minWidth: double.infinity,
-                  child: Text('SUBMIT',
+              Form(
+                key: _formKey,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Contact Form',
                       style: TextStyle(
-                          fontFamily: 'Comfortaa',
+                          fontSize: 40,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white)),
+                          fontFamily: 'Comfortaa'),
+                    ),
+                    Text(
+                      'I am available for opportunities in freelancing, collaborations, and internships',
+                      style: TextStyle(fontFamily: "Comfortaa"),
+                    ),
+                    TextFormCustom(
+                      hint: 'Name',
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return "Enter a name";
+                        } else {
+                          return null;
+                        }
+                      },
+                    ),
+                    TextFormCustom(
+                      hint: "Email",
+                      isEmail: true,
+                      validator: (value) {
+                        if (!validator.isEmail(value!)) {
+                          return "Enter a valid Email";
+                        } else {
+                          return null;
+                        }
+                      },
+                    ),
+                    TextFormCustom(
+                      hint: 'Subject',
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return "Enter a subject";
+                        } else {
+                          return null;
+                        }
+                      },
+                    ),
+                    TextFormCustom(
+                      hint: 'Message',
+                      number_of_lines: 7,
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return "Enter a message";
+                        } else {
+                          return null;
+                        }
+                      },
+                    ),
+                    //submit button
+                    Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+                      child: MaterialButton(
+                        onPressed: () {
+                          if (_formKey.currentState!.validate()) {}
+                        },
+                        color: Colors.black87,
+                        height: 60,
+                        minWidth: double.infinity,
+                        child: Text('SUBMIT',
+                            style: TextStyle(
+                                fontFamily: 'Comfortaa',
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white)),
+                      ),
+                    )
+                  ],
                 ),
-              )
+              ),
             ],
           ),
         ),
