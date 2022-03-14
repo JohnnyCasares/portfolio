@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/addresses/experience/experience.dart';
+import 'package:portfolio/addresses/projects/projects.dart';
+import 'package:portfolio/template/templatelayout.dart';
 
 import 'addresses/home/home.dart';
 
@@ -14,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Portfolio',
-      home: Home(),
+      home: TemplateLayout(),
     );
   }
 }

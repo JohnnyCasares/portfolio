@@ -1,10 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/navBar/navBarBuilders/navBar_Desktop-Tablet.dart';
 
 class Experience extends StatelessWidget {
   const Experience({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            NavigationBarDesktopTablet(),
+            Container(
+              height: 200,
+              color: Colors.red,
+            )
+          ],
+        ),
+      ),
+    );
   }
 }

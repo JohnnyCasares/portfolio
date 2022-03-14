@@ -1,17 +1,10 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
-//This class goes inside of home and it is used for placing a picture to the left
-//and text to the right. The color is for the backgorund of the text.
-//It is gonna be used for biography and education
-
-class InfoField extends StatelessWidget {
+class InfoFieldDesktopTablet extends StatelessWidget {
   String description;
   String imageURL;
   Color color;
-
-  InfoField(
+  InfoFieldDesktopTablet(
       {required this.description, required this.imageURL, required this.color});
 
   @override
