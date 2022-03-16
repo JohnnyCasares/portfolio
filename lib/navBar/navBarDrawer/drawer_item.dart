@@ -6,8 +6,8 @@ import 'package:portfolio/navBar/navBarComponents/navBarItem.dart';
 class DrawerItem extends StatelessWidget {
   final String title;
 
-  final String? navigationPath;
-  const DrawerItem({required this.title, this.navigationPath});
+  final String navigationPath;
+  const DrawerItem({required this.title, required this.navigationPath});
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +18,7 @@ class DrawerItem extends StatelessWidget {
           // Icon(icon),
           NavigationBarItem(
             title: title,
+            navigationPath: navigationPath,
           ),
         ],
       ),

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/addresses/experience/experience.dart';
 import 'package:portfolio/addresses/projects/projects.dart';
+import 'package:portfolio/locator.dart';
 import 'package:portfolio/template/templatelayout.dart';
 
 import 'addresses/home/home.dart';
 
 void main() {
+  setUpLocator();
   runApp(const MyApp());
 }
 

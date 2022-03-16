@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/addresses/home/home.dart';
+import 'package:portfolio/locator.dart';
 import 'package:portfolio/navBar/navBarBuilders/navBar_Desktop-Tablet.dart';
 import 'package:portfolio/navBar/navBarDrawer/navigation_drawer.dart';
 import 'package:portfolio/navBar/navigationBar.dart';
+import 'package:portfolio/routing/route_names.dart';
+import 'package:portfolio/routing/router.dart';
+import 'package:portfolio/services/navigation_services.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 //for now this template is useless. it will have a better use later
@@ -23,13 +27,18 @@ class TemplateLayout extends StatelessWidget {
         endDrawer: sizingInformation.deviceScreenType == DeviceScreenType.mobile
             ? NavigationDrawer()
             : null,
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              NavigationBarCustom(),
-              Home(),
-            ],
-          ),
+        backgroundColor: Colors.white,
+        body: Column(
+          children: [
+            NavigationBarCustom(),
+            Expanded(
+              child: Navigator(
+                key: locator<NavigationService>().navigatorKey,
+                onGenerateRoute: generateRoute,
+                initialRoute: HomeRoute,
+              ),
+            )
+          ],
         ),
       ),
     );

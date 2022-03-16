@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/navBar/navBarComponents/logo.dart';
 import 'package:portfolio/navBar/navBarComponents/navBarItem.dart';
+import 'package:portfolio/routing/route_names.dart';
 
 class NavigationBarDesktopTablet extends StatelessWidget {
   const NavigationBarDesktopTablet({Key? key}) : super(key: key);
@@ -19,9 +20,18 @@ class NavigationBarDesktopTablet extends StatelessWidget {
           ),
 
           //Buttons home, experience...
-          NavigationBarItem(title: 'Home'),
-          NavigationBarItem(title: 'Projects'),
-          NavigationBarItem(title: 'Experience'),
+          NavigationBarItem(
+            title: 'Home',
+            navigationPath: HomeRoute,
+          ),
+          NavigationBarItem(
+            title: 'Projects',
+            navigationPath: ProjectsRoute,
+          ),
+          NavigationBarItem(
+            title: 'Experience',
+            navigationPath: ExperienceRoute,
+          ),
         ],
       ),
     );

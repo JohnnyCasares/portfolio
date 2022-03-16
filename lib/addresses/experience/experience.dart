@@ -10,7 +10,6 @@ class Experience extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            NavigationBarDesktopTablet(),
             Container(
               height: 200,
               color: Colors.red,

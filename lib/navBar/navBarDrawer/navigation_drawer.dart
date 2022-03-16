@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/addresses/home/extra_info.dart';
 import 'package:portfolio/navBar/navBarDrawer/drawer_item.dart';
+import 'package:portfolio/routing/route_names.dart';
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({Key? key}) : super(key: key);
@@ -18,9 +19,18 @@ class NavigationDrawer extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          DrawerItem(title: 'Home'),
-          DrawerItem(title: 'Projects'),
-          DrawerItem(title: 'Experience'),
+          DrawerItem(
+            title: 'Home',
+            navigationPath: HomeRoute,
+          ),
+          DrawerItem(
+            title: 'Projects',
+            navigationPath: ProjectsRoute,
+          ),
+          DrawerItem(
+            title: 'Experience',
+            navigationPath: ExperienceRoute,
+          ),
           Column(
             children: [
               Text(
