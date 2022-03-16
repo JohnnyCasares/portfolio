@@ -13,7 +13,14 @@ class NavigationBarMobile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Logo(title: "Johnny Casares"),
-          IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+          IconButton(
+              onPressed: () {
+                //This is very important.
+                //The function below allows user to tap on menu icon and
+                //open the Drawer
+                Scaffold.of(context).openEndDrawer();
+              },
+              icon: Icon(Icons.menu)),
         ],
       ),
     );
