@@ -4,7 +4,8 @@ This projects serves as a learning tool for me to understand how flutter works f
 
 As of now the technologies involved are:
 
-Flutter\n
+Flutter
+
 Firebase
 
 ## Getting Started with FLutter
