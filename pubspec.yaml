@@ -38,6 +38,10 @@ dependencies:
   validators: ^3.0.0
   responsive_builder: ^0.4.2
   get_it:
+
+  cloud_firestore: ^3.1.10
+  firebase_core: ^1.13.1
+  
   
 
 dev_dependencies:

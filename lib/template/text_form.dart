@@ -7,15 +7,21 @@ class TextFormCustom extends StatelessWidget {
   //if email true then
   bool? isEmail;
   String? Function(String?)? validator;
+  TextEditingController controller;
 
   TextFormCustom(
-      {required this.hint, this.number_of_lines, this.isEmail, this.validator});
+      {required this.hint,
+      this.number_of_lines,
+      this.isEmail,
+      this.validator,
+      required this.controller});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 1, vertical: 5),
       child: TextFormField(
+        controller: controller,
         maxLines: number_of_lines ?? 1,
         validator: validator,
 

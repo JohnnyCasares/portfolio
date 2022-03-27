@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import 'package:portfolio/addresses/home/extra_info.dart';
 import 'package:portfolio/addresses/home/infoField/info_field.dart';
@@ -10,6 +12,10 @@ import 'package:validators/validators.dart' as validator;
 
 class Home extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
+  final TextEditingController _name = TextEditingController();
+  final TextEditingController _email = TextEditingController();
+  final TextEditingController _subject = TextEditingController();
+  final TextEditingController _message = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -137,6 +143,7 @@ class Home extends StatelessWidget {
                     style: TextStyle(fontFamily: "Comfortaa"),
                   ),
                   TextFormCustom(
+                    controller: _name,
                     hint: 'Name',
                     validator: (value) {
                       if (value!.isEmpty) {
@@ -147,6 +154,7 @@ class Home extends StatelessWidget {
                     },
                   ),
                   TextFormCustom(
+                    controller: _email,
                     hint: "Email",
                     isEmail: true,
                     validator: (value) {
@@ -158,6 +166,7 @@ class Home extends StatelessWidget {
                     },
                   ),
                   TextFormCustom(
+                    controller: _subject,
                     hint: 'Subject',
                     validator: (value) {
                       if (value!.isEmpty) {
@@ -168,6 +177,7 @@ class Home extends StatelessWidget {
                     },
                   ),
                   TextFormCustom(
+                    controller: _message,
                     hint: 'Message',
                     number_of_lines: 7,
                     validator: (value) {
@@ -182,8 +192,27 @@ class Home extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 1, vertical: 10),
                     child: MaterialButton(
-                      onPressed: () {
-                        if (_formKey.currentState!.validate()) {}
+                      onPressed: () async {
+                        if (_formKey.currentState!.validate()) {
+                          String message;
+                          try {
+                            final collection = FirebaseFirestore.instance
+                                .collection("contactForm");
+
+                            await collection.doc().set({
+                              'timesStamp': FieldValue.serverTimestamp(),
+                              'name': _name.text,
+                              'email': _email.text,
+                              'message': _message.text
+                            });
+                            message = 'Sent';
+                          } catch (_) {
+                            message = 'Error when sending';
+                          }
+                          ScaffoldMessenger.of(context)
+                              .showSnackBar(SnackBar(content: Text(message)));
+                          Navigator.pop(context);
+                        }
                       },
                       color: Colors.black87,
                       height: 60,
