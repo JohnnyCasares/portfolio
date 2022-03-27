@@ -202,16 +202,20 @@ class Home extends StatelessWidget {
                             await collection.doc().set({
                               'timesStamp': FieldValue.serverTimestamp(),
                               'name': _name.text,
+                              'subject': _subject.text,
                               'email': _email.text,
                               'message': _message.text
                             });
                             message = 'Sent';
+                            _name.clear();
+                            _email.clear();
+                            _subject.clear();
+                            _message.clear();
                           } catch (_) {
                             message = 'Error when sending';
                           }
                           ScaffoldMessenger.of(context)
                               .showSnackBar(SnackBar(content: Text(message)));
-                          Navigator.pop(context);
                         }
                       },
                       color: Colors.black87,
