@@ -43,7 +43,7 @@ class Home extends StatelessWidget {
                 description:
                     "I am Johnny Casares and welcome to my portfolio.\nI come from Venezuela and I have been in America since 2016. Currently I am pursuing a degree in Computer Science and I am thinking of pursuing a second major in the Internet of Things. Some of my current projects involve learning more about:\nHardware, Web and App Development, Linux essentials.\nSome of the tools I have used up to this point are:\nJava, Dart(Flutter), Linux Mint, Python    ",
                 imageURL:
-                    'https://media-exp1.licdn.com/dms/image/C4D03AQFLcyKms8N-iw/profile-displayphoto-shrink_800_800/0/1633735666264?e=1651708800&v=beta&t=ms5xyxQy_SLibXRBLDZvgyMT4QIsjJqfWJl1Qgo-B6U',
+                    'https://media-exp1.licdn.com/dms/image/C4D03AQFLcyKms8N-iw/profile-displayphoto-shrink_800_800/0/1633735666264?e=1657756800&v=beta&t=CS7aw6lsJ_sfSTHoDJQHF5Le7ZKEyYP48abZyhnPgpI',
                 color: Colors.lightBlueAccent),
             InfoField(
                 description:

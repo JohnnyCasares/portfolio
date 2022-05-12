@@ -21,7 +21,7 @@ class Experience extends StatelessWidget {
           IconButton(
               onPressed: () {
                 downloadFile(
-                    "lib/assets/resume/JohnnyCasaresPortfolioResume.pdf");
+                    "assets/lib/assets/resume/JohnnyCasaresPortfolioResume.pdf");
               },
               icon: Icon(Icons.download)),
         ],
