@@ -28,7 +28,7 @@ class InfoFieldMobile extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(100.0),
                 ),
-                child: Image.network(imageURL, fit: BoxFit.cover),
+                child: Image.asset(imageURL, fit: BoxFit.cover),
               ),
             ),
 

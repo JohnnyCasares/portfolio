@@ -42,14 +42,12 @@ class Home extends StatelessWidget {
             InfoField(
                 description:
                     "I am Johnny Casares and welcome to my portfolio.\nI come from Venezuela and I have been in America since 2016. Currently I am pursuing a degree in Computer Science and I am thinking of pursuing a second major in the Internet of Things. Some of my current projects involve learning more about:\nHardware, Web and App Development, Linux essentials.\nSome of the tools I have used up to this point are:\nJava, Dart(Flutter), Linux Mint, Python    ",
-                imageURL:
-                    'https://media-exp1.licdn.com/dms/image/C4D03AQFLcyKms8N-iw/profile-displayphoto-shrink_800_800/0/1633735666264?e=1657756800&v=beta&t=CS7aw6lsJ_sfSTHoDJQHF5Le7ZKEyYP48abZyhnPgpI',
+                imageURL: 'lib/assets/images/JohnnyCasares.png',
                 color: Colors.lightBlueAccent),
             InfoField(
                 description:
                     'Bachelor of Science in Computer Science                   2020-2024 \n•Florida International University (FIU), Miami, FL\n•Relevant Coursework: Logic for CS, Discrete Structures, Data Structures, Internet of Things, Computer Architecture, Software Engineering, Statistics, Calculus II',
-                imageURL:
-                    'https://media-exp1.licdn.com/dms/image/C560BAQEVMx6tBKgu4g/company-logo_200_200/0/1607460696992?e=1654128000&v=beta&t=FiYnmGj2v52FStr6fgcpjlg-4YYESehLBL_K6pLjc74',
+                imageURL: 'lib/assets/images/FIU.png',
                 color: Colors.lightGreenAccent),
 
             //AFFILIATIONS
@@ -71,19 +69,16 @@ class Home extends StatelessWidget {
                       httpAddress:
                           "https://gdsc.community.dev/florida-international-university/",
                       title: "GDSC",
-                      imageURL:
-                          'https://media-exp1.licdn.com/dms/image/C4E0BAQE5ZCa0KH8TaQ/company-logo_200_200/0/1630068453170?e=1654732800&v=beta&t=hbjXRfhf_xIJ0eugfFH2wtDUwG5rq16quyjI4-kp3R4',
+                      imageURL: 'lib/assets/images/GDSC.png',
                     ),
                     ExtraInfo(
                         httpAddress: "https://upe.cs.fiu.edu",
                         title: 'UPE',
-                        imageURL:
-                            'https://media-exp1.licdn.com/dms/image/C4D0BAQFV7Iw_00bcSw/company-logo_200_200/0/1641511802317?e=1654128000&v=beta&t=pqv4hMCqbF1HbjHSK1ik7_ML6ADUDk7KU1VUw77amsc'),
+                        imageURL: 'lib/assets/images/UPE.jpg'),
                     ExtraInfo(
                         httpAddress: "https://shpe.fiu.edu",
                         title: 'SHPE',
-                        imageURL:
-                            'https://media-exp1.licdn.com/dms/image/C4E0BAQH9C4XcWwWGhQ/company-logo_200_200/0/1581188449571?e=1654128000&v=beta&t=2JNLx2cCzDBIQYSOngf41I1ZrHuX-IBtIVNuH2aw8PA'),
+                        imageURL: 'lib/assets/images/SHPE.jpg'),
                   ],
                 ),
               ],
@@ -108,16 +103,14 @@ class Home extends StatelessWidget {
                   children: [
                     ExtraInfo(
                       title: "GitHub",
-                      imageURL:
-                          'https://media-exp1.licdn.com/dms/image/C4D0BAQFY3BGhoMwEEA/company-logo_200_200/0/1626195279622?e=1654128000&v=beta&t=BUN1lXpxv15CW574NNxFmmoXL381jJ165C9sznptM7w',
+                      imageURL: 'lib/assets/images/github.jpg ',
                       httpAddress: "https://github.com/JohnnyCasares",
                     ),
                     ExtraInfo(
                         httpAddress:
                             'https://www.linkedin.com/in/johnny-casares7/',
                         title: 'LinkedIn',
-                        imageURL:
-                            'https://media-exp1.licdn.com/dms/image/C560BAQHaVYd13rRz3A/company-logo_200_200/0/1638831589865?e=1654128000&v=beta&t=zyLzh9MhOYlbVSpSzpdj5TzRMMFY7nClJXB_xtWIx7s'),
+                        imageURL: 'lib/assets/images/linkedin.png'),
                   ],
                 ),
               ],
