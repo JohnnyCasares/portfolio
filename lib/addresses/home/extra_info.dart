@@ -27,7 +27,7 @@ class ExtraInfo extends StatelessWidget {
           Card(
             clipBehavior: Clip.antiAliasWithSaveLayer,
             child: IconButton(
-              icon: Image.network(imageURL, fit: BoxFit.cover),
+              icon: Image.asset(imageURL, fit: BoxFit.cover),
               iconSize: 60,
               onPressed: _launchUrl,
             ),

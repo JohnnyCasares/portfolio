@@ -48,16 +48,14 @@ class NavigationDrawer extends StatelessWidget {
                 children: [
                   ExtraInfo(
                     title: "GitHub",
-                    imageURL:
-                        'https://media-exp1.licdn.com/dms/image/C4D0BAQFY3BGhoMwEEA/company-logo_200_200/0/1626195279622?e=1654128000&v=beta&t=BUN1lXpxv15CW574NNxFmmoXL381jJ165C9sznptM7w',
+                    imageURL: 'lib/assets/images/github.jpg',
                     httpAddress: "https://github.com/JohnnyCasares",
                   ),
                   ExtraInfo(
                       httpAddress:
                           'https://www.linkedin.com/in/johnny-casares7/',
                       title: 'LinkedIn',
-                      imageURL:
-                          'https://media-exp1.licdn.com/dms/image/C560BAQHaVYd13rRz3A/company-logo_200_200/0/1638831589865?e=1654128000&v=beta&t=zyLzh9MhOYlbVSpSzpdj5TzRMMFY7nClJXB_xtWIx7s'),
+                      imageURL: 'lib/assets/images/linkedin.png'),
                 ],
               ),
             ],
