@@ -103,7 +103,7 @@ class Home extends StatelessWidget {
                   children: [
                     ExtraInfo(
                       title: "GitHub",
-                      imageURL: 'lib/assets/images/github.jpg ',
+                      imageURL: 'lib/assets/images/github.jpg',
                       httpAddress: "https://github.com/JohnnyCasares",
                     ),
                     ExtraInfo(
